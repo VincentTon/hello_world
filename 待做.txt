@@ -1,0 +1,15 @@
+1.物联网项目
+整体宏观的了解
+html界面优化
+nginx服务器
+服务器有哪些？数据库有哪些？云服务器？
+
+2.github 版本管理
+
+3.
+网易邮箱vincent_ton@163.com
+
+4.github
+用户名 VincentTon
+
+5.uboot , linux内核
