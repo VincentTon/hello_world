@@ -1,0 +1,41 @@
+cd /mnt/boa/www
+
+cd /home/ ; rm /home/www -rf;  cp /mnt/boa/www  /home/www -r;cd www/ ;cd attendance; ./demo
+
+注意cgi 的交叉编译
+attendance   main.c 的交叉编译
+
+arm-linux-gcc register.c sqlite3.c -o  register.cgi -lpthread -ldl
+
+arm-linux-gcc query.c sqlite3.c -o  query.cgi -lpthread -ldl
+
+arm-linux-gcc login.c sqlite3.c -o  login.cgi -lpthread -ldl
+
+arm-linux-gcc cancellation.c sqlite3.c -o  cancellation.cgi -lpthread -ldl
+
+
+attendance  中  make
+
+
+./mount_nfs.sh 10.0.122.127 /home/tch /mnt
+
+sudo sqlite3 rfid.db
+
+create table a2(id int, name text);
+insert into a1 values(100,'tom');
+insert into a1 values(200,'bob');
+insert into a2 values(100,'tom');
+insert into a2 values(200,'bob');
+
+.table
+select *from a1;
+select *from a2;
+
+delete from a1 where id =100;
+
+create trigger a1_delete after delete on a1 begin delete from a2 where id=oid.id;end;
+
+
+
+
+

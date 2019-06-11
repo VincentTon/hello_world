@@ -1,0 +1,12 @@
+1.编译时，
+In file included from get_interface.c:3:0:
+/usr/include/net/if_arp.h:65:28: 错误： ‘ETH_ALEN’未声明(不在函数内)
+make: *** [get_interface.o] 错误 1
+2. sudo ./router
+3.打印网卡信息乱码
+4.编译时undefined reference to
+链接的库文件中又使用了另一个库文件 ，我就是犯了这种错误！！！
+gcc -o main main.c test.a func.a  
+在链接命令中给出所依赖的库时，需要注意库之间的依赖顺序，依赖其他库的库一定要放到被依赖库的前面，这样才能真正避免undefined reference的错误，完成编译链接。
+
+5. 记事本另存格式为 utf8

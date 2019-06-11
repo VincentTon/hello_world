@@ -1,0 +1,6 @@
+which 查看命令所在目录
+mkdir -p aa/bb
+touch 创建文件
+rm -rf 强制递归删除
+wc 查看文件信息
+chmod 777 file1

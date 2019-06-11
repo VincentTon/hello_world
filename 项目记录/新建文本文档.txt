@@ -1,0 +1,25 @@
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/6.arm-mqtt/mqtt_arm/mqtt_install/home/edu/share/mqtt_arm/mqtt_install/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/6.arm-mqtt/mqtt_arm/ssl_install/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/6.arm-mqtt/mqtt_arm/uuid_install/lib
+export PATH=$PATH:/home/6.arm-mqtt/mqtt_arm/mqtt_install/home/edu/share/mqtt_arm/mqtt_install/bin
+export PATH=$PATH:/home/6.arm-mqtt/mqtt_arm/mqtt_install/home/edu/share/mqtt_arm/mqtt_install/sbin
+export PATH=$PATH:/home/6.arm-mqtt/mqtt_arm/ssl_install/bin
+
+
+export PATH=$PATH:/home/tch/8.arm-linux-gcc/4.3.2/bin
+
+
+ÓÃarm-linux°æµÄmosquitto¿â
+cc  = arm-linux-gcc 
+cflags = -lmosquitto -lpthread -ldl  -luuid -lssl -lcrypto -I/home/tch/6.arm-mqtt/mqtt_arm/mqtt_install/home/edu/share/mqtt_arm/mqtt_install/include -L/home/tch/6.arm-mqtt/mqtt_arm/mqtt_install/home/edu/share/mqtt_arm/mqtt_install/lib-L/home/tch/6.arm-mqtt/mqtt_arm/ssl_install/lib-L/home/tch/6.arm-mqtt/mqtt_arm/uuid_install/lib
+
+
+main:
+	$(cc) mqtt_demo.c -o demo $(cflags)
+	
+.phony:clean
+clean:
+	rm *.o demo -fr
+
+
+/home/tch/6.arm-mqtt/mqtt_arm/mqtt_install/home/edu/share/mqtt_arm/mqtt_install/lib
